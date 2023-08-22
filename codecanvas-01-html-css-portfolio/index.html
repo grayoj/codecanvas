@@ -4,11 +4,31 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Gerald Maduabuchi | Portfolio </title>
+ <title>Gerald Maduabuchi | Portfolio</title>
+ <link rel="stylesheet" href="./src/css/index.css" />
 </head>
 
 <body>
-
+ <header>
+  <nav>
+   <div class="logo">Gerald.</div>
+   <input type="checkbox" id="menu-toggle" class="hidden-checkbox">
+   <label for="menu-toggle" class="menu-icon">&#9776;</label>
+   <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li class="dropdown">
+     <a href="#">My Projects &#9662;</a>
+     <ul class="dropdown-items">
+      <li><a href="#">HTML Projects</a></li>
+      <li><a href="#">Typescript Projects</a></li>
+      <li><a href="#">Javascript Projects</a></li>
+     </ul>
+    </li>
+    <li><a href="#">Contact</a></li>
+   </ul>
+  </nav>
+ </header>
 </body>
 
 </html>

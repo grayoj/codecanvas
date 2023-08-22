@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation Bar Styles */
+nav {
+  background-color: rgb(31, 31, 31);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.menu-icon {
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  background-color: black;
+}
+
+.dropdown-items {
+  display: none;
+  position: absolute;
+  background-color: rgb(31, 31, 31);
+  border-top: 1px solid rgb(31, 31, 31);
+  width: 200px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-items {
+  display: block;
+}
+
+#menu-toggle:checked + .nav-links .dropdown-items {
+  display: block;
+}
+
+/* Media queries for Navbar  */
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100px;
+    position: absolute;
+    background-color: rgb(31, 31, 31);
+    top: 50px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .dropdown-items {
+    position: static;
+    display: none;
+    color: white;
+    width: 100%;
+    background-color: rgb(31, 31, 31); /* Change this line */
+    border-top: none;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .dropdown:hover .dropdown-items {
+    display: block;
+  }
+
+  #menu-toggle:checked + .nav-links .dropdown-items {
+    display: block;
+  }
+
+  .hidden-checkbox {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+}
