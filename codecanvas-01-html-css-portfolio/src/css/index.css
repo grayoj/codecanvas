@@ -126,3 +126,44 @@ nav {
     left: -9999px;
   }
 }
+
+/* For hero section */
+
+.hero-section {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 50px 0px;
+}
+
+.hero-image {
+  text-align: center;
+}
+
+.hero-text {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+}
+
+/* For Card Section */
+
+.card-section {
+  margin: 5rem 10rem;
+}
+
+.project-title {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* For Footer Section */
+
+.footer {
+  background-color: rgb(31, 31, 31);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+}
